@@ -13733,6 +13733,12 @@
     githubId = 5007494;
     name = "Julius Rickert";
   };
+  jullang = {
+    name = "Jul Lang";
+    email = "jullanggit@proton.me";
+    github = "jullanggit";
+    githubId = 144773701;
+  };
   julm = {
     email = "julm@sourcephile.fr";
     matrix = "@julm:matrix.org";
