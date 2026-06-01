@@ -1,9 +1,8 @@
 {
   lib,
-  pkgs,
   buildGoModule,
   fetchFromGitHub,
-  makeWrapper,
+  nix-update-script,
 }:
 
 buildGoModule rec {
@@ -26,4 +25,6 @@ buildGoModule rec {
     maintainers = with lib.maintainers; [ jullang ]; # TODO: Add yourself in maintainers/maintainer-list.nix
     mainProgram = "immich-upload-optimizer";
   };
+
+  passthru.updateScript = nix-update-script { };
 }
