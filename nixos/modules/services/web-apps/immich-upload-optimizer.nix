@@ -136,6 +136,11 @@ in
         after = [ "network.target" ];
         wantedBy = [ "multi-user.target" ];
 
+        path = [
+          pkgs.bash
+          pkgs.coreutils
+        ];
+
         serviceConfig = {
           Type = "simple";
           ExecStart = "${lib.getExe cfg.package} -upstream ${cfg.upstream} -listen ${cfg.host}:${toString cfg.port} -tasks_file ${tasksFile}";
